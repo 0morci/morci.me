@@ -1,0 +1,41 @@
+/* morci.me: el estilo de la app (gris claro, tarjetas blancas, Geist) con un acento rojo y titulares grandes. */
+:root {
+  --canvas: #f4f4f3; --surface: #ffffff; --line: #e4e4e2; --line-strong: #d6d6d3;
+  --ink: #1a1a1a; --ink-2: #4a4a4a; --ink-3: #6b6b6b;
+  --rojo: #a63d36; --rojo-bg: #faeae8;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: Geist, "Helvetica Neue", Helvetica, system-ui, sans-serif; line-height: 1.5; }
+a { color: inherit; }
+.envoltorio { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+/* Barra */
+.barra { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+.marca { font-weight: 800; font-size: 22px; letter-spacing: -0.03em; text-decoration: none; }
+.marca span { color: var(--rojo); }
+.menu { display: flex; gap: 22px; font-size: 15px; }
+.menu a { text-decoration: none; color: var(--ink-2); }
+.menu a:hover, .menu a.activo { color: var(--ink); }
+.menu a.activo { box-shadow: inset 0 -2px 0 var(--ink); }
+
+/* Titulares */
+.gran { font-weight: 700; letter-spacing: -0.035em; line-height: 1; margin: 0; }
+.gran em { font-style: normal; color: var(--ink-3); }
+.serif { font-family: Newsreader, Georgia, serif; }
+.etiqueta { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+
+/* Tarjetas */
+.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.boton { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; padding: 12px 18px; border-radius: 10px; text-decoration: none; border: 1px solid var(--ink); white-space: nowrap; }
+.boton.lleno { background: var(--ink); color: #fff; }
+.boton.rojo { background: var(--ink); border-color: var(--ink); color: #fff; }
+.pie { border-top: 1px solid var(--line); margin-top: 64px; padding: 26px 0 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--ink-3); }
+.pie a { color: var(--ink-2); }
+.enlaces-pie { display: flex; gap: 18px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .envoltorio { padding: 0 16px; }
+  .barra { flex-wrap: wrap; gap: 10px; }
+  .menu { gap: 14px; font-size: 14px; flex-wrap: wrap; }
+}
