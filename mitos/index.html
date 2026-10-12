@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitos del videojuego, comprobados - morci</title>
+<meta name="description" content="Historias sobre videojuegos que se repiten desde hace años, contrastadas con los documentos originales. Qué es verdad, qué no y dónde comprobarlo.">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/estilo.css">
+<style>
+  .marca span { color: #3d6ea1; }
+  .cabeza-mitos { padding: 48px 0 28px; }
+  .cabeza-mitos .gran { font-size: clamp(38px, 6vw, 68px); margin-top: 8px; }
+  .intro { font-size: clamp(18px, 2.2vw, 21px); color: var(--ink-2); max-width: 680px; margin: 22px 0 6px; }
+  .como { font-size: 15px; color: var(--ink-3); max-width: 680px; margin: 0; }
+  .buscador { display: flex; gap: 10px; margin: 8px 0 18px; }
+  .buscador input { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line-strong); background: #fff; }
+  .filtros { display: flex; gap: 6px; flex-wrap: wrap; }
+  .filtros button { font: inherit; font-size: 14px; font-weight: 500; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-strong); background: #fff; color: var(--ink-2); cursor: pointer; white-space: nowrap; }
+  .filtros button.activo { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .lista { display: flex; flex-direction: column; gap: 14px; }
+  .mito .cabeza { display: flex; gap: 18px; align-items: flex-start; justify-content: space-between; }
+  .dicho { font-family: Newsreader, Georgia, serif; font-size: 25px; line-height: 1.25; font-weight: 600; margin: 0; }
+  .veredicto { flex: none; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 8px; border: 1px solid; margin-top: 4px; white-space: nowrap; }
+  .falso { color: #9a3a33; background: #f8ecea; border-color: #ead0cc; }
+  .parte { color: #7c6430; background: #f7f3e8; border-color: #e6dcc0; }
+  .cierto { color: #2f6b4b; background: #ebf5ef; border-color: #c9e2d3; }
+  .quien { font-size: 14px; color: var(--ink-3); margin: 10px 0 0; }
+  .quien a { color: var(--ink-3); }
+  .lo { font-family: Newsreader, Georgia, serif; font-size: 18px; line-height: 1.55; margin: 14px 0 0; }
+  .lo b { display: block; font-family: Geist, system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 2px; }
+  details { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+  summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+  ul.fuentes { margin: 10px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  ul.fuentes a { color: var(--ink); }
+  .video { font-size: 14px; margin: 12px 0 0; color: var(--ink-3); }
+  .video a { color: #3d6ea1; font-weight: 500; }
+  .vacio { display: none; color: var(--ink-3); font-size: 15px; padding: 10px 0; }
+  .final { margin-top: 22px; background: #f1f4f8; border-color: #dfe6ee; color: var(--ink-2); font-size: 15px; }
+  .final a { color: var(--ink); font-weight: 500; }
+  @media (max-width: 640px) { .mito .cabeza { flex-direction: column; gap: 8px; } .dicho { font-size: 21px; } .buscador { flex-direction: column; } .filtros button { padding: 9px 14px; } }
+</style>
+</head>
+<body>
+<div class="envoltorio">
+  <nav class="barra">
+    <a class="marca" href="/">morci<span>.</span></a>
+    <div class="menu"><a href="https://www.youtube.com/@morcimorcimorci">Vídeos</a><a href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">Newsletter</a><a class="activo" href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a></div>
+  </nav>
+
+  <header class="cabeza-mitos">
+    <span class="etiqueta">Con el documento original de cada uno</span>
+    <h1 class="gran">Mitos del videojuego, <em>comprobados.</em></h1>
+    <p class="intro serif">Historias sobre videojuegos que se repiten desde hace años, contrastadas con los documentos originales. Cada ficha dice qué es verdad, qué no y dónde comprobarlo tú.</p>
+    <p class="como">Para periodistas, docentes y curiosos: cita la ficha o, mejor, la fuente original que enlaza. Cada mito sale de la investigación de un vídeo del canal.</p>
+  </header>
+
+  <div class="buscador">
+    <input type="search" id="buscar" placeholder="Busca un juego, una consola o un tema" aria-label="Buscar">
+    <div class="filtros" role="group" aria-label="Filtrar por veredicto">
+      <button class="activo" data-v="">Todos</button><button data-v="falso">Falso</button><button data-v="parte">En parte</button><button data-v="cierto">Cierto</button>
+    </div>
+  </div>
+
+  <section class="lista">
+<article class="tarjeta mito">
+    <div class="cabeza">
+      <p class="dicho">«La PS2 provocó la escasez de coltán que alimentó la guerra del Congo.»</p>
+      <span class="veredicto falso">Falso</span>
+    </div>
+    <p class="quien">Lo repiten, entre otros, <a href="https://towardfreedom.org/story/archives/africa-archives/inside-africas-playstation-war/">Toward Freedom (2008)</a> y <a href="https://granta.com/power-metals/">Granta</a>.</p>
+    <p class="lo"><b>Lo que dicen los documentos</b>La escasez de PS2 de 2000 fue un problema de fabricación: el paso a chips de 0,18 micras en la fábrica de Nagasaki hundió la producción del procesador gráfico, y Sony recortó el envío a Norteamérica de un millón a 500.000 consolas. Ninguna fuente primaria de Sony lo relaciona con el coltán, y nadie ha medido qué parte del tántalo iba a consolas: más del 60 % iba a componentes electrónicos, sobre todo de móviles.</p>
+    <p class="lo"><b>Lo que sí es verdad</b>El precio del tántalo pasó de 34 dólares la libra en 1999 a 220 en 2000, y la ONU estimó que el ejército ruandés podía sacar hasta 20 millones de dólares al mes del coltán congoleño.</p>
+    <details>
+      <summary>Las fuentes originales (6)</summary>
+      <ul class="fuentes">
+        <li><a href="https://money.cnn.com/2000/09/27/technology/sony/index.htm">CNNfn, 27 de septiembre de 2000</a>: el recorte del envío</li>
+        <li><a href="https://www.ign.com/articles/2000/10/27/sony-explains-ps2-shortages">IGN, 27 de octubre de 2000</a> y <a href="https://www.theregister.com/2000/10/30/sony_behind_playstation_production_problems/">The Register, 30 de octubre de 2000</a>: el fallo de fabricación</li>
+        <li><a href="https://pubs.usgs.gov/sir/2012/5188/tables/tantalum.xlsx">USGS, precios del tántalo</a></li>
+        <li><a href="https://reliefweb.int/report/democratic-republic-congo/report-panel-experts-illegal-exploitation-natural-resources-and">ONU, informe S/2001/357</a></li>
+        <li><a href="https://onlinelibrary.wiley.com/doi/10.1111/jiec.12206">Moran, Journal of Industrial Ecology, 2015</a></li>
+      </ul>
+    </details>
+    <p class="video">El vídeo: <a href="https://www.youtube.com/watch?v=rTfo0FiF62s">El mito de la PS2 y la guerra del Congo</a></p>
+  </article>
+<article class="tarjeta mito">
+    <div class="cabeza">
+      <p class="dicho">«Sony tuvo que retrasar el lanzamiento de la PS2 por culpa del coltán.»</p>
+      <span class="veredicto falso">Falso</span>
+    </div>
+    <p class="quien">Lo afirma <a href="https://www.projetogap.org/en/news/coltan-conflicts-in-congo-and-the-gorillas/">Projeto GAP</a>, sin citar ningún documento.</p>
+    <p class="lo"><b>Lo que dicen los documentos</b>Lo que hizo Sony fue recortar el número de consolas del primer envío a Norteamérica, de un millón a 500.000, y lo atribuyó a la escasez de componentes, no a ningún mineral.</p>
+    <details>
+      <summary>Las fuentes originales (1)</summary>
+      <ul class="fuentes"><li><a href="https://money.cnn.com/2000/09/27/technology/sony/index.htm">CNNfn, 27 de septiembre de 2000</a></li></ul>
+    </details>
+    <p class="video">El vídeo: <a href="https://www.youtube.com/watch?v=rTfo0FiF62s">El mito de la PS2 y la guerra del Congo</a></p>
+  </article>
+<article class="tarjeta mito">
+    <div class="cabeza">
+      <p class="dicho">«This War of Mine está basado en el asedio de Sarajevo.»</p>
+      <span class="veredicto parte">En parte</span>
+    </div>
+    <p class="lo"><b>Lo que dicen los documentos</b>La primera inspiración, según Paweł Miechowski, de 11 bit studios, fue «One Year in Hell», un texto anónimo de un superviviente de la guerra de Bosnia que él sitúa en Mostar y que circula entre supervivencialistas. Pero varias de las historias reales que les sirvieron sí son de Sarajevo, y el libro que más les gustó fue «Besieged», de Barbara Demick, sobre una calle de Sarajevo durante el asedio. La ciudad del juego es inventada.</p>
+    <details>
+      <summary>Las fuentes originales (2)</summary>
+      <ul class="fuentes">
+        <li><a href="https://www.rockpapershotgun.com/this-war-of-mine-interview">Rock Paper Shotgun, entrevista a Miechowski, 5 de marzo de 2014</a></li>
+        <li><a href="https://www.pcgamesn.com/this-war-of-mine/the-uneasy-brilliance-of-this-war-of-mine">PCGamesN, 2014</a></li>
+      </ul>
+    </details>
+    <p class="video">El vídeo: <a href="https://www.youtube.com/watch?v=8py_OvG5QnY">This War of Mine y lo que de verdad salvó a Sarajevo</a></p>
+  </article>
+<article class="tarjeta mito">
+    <div class="cabeza">
+      <p class="dicho">«Apple, Microsoft y otras tecnológicas fueron condenadas por trabajo infantil en las minas de cobalto.»</p>
+      <span class="veredicto falso">Falso</span>
+    </div>
+    <p class="lo"><b>Lo que dicen los documentos</b>La demanda de International Rights Advocates de 2019 contra Apple, Alphabet, Dell, Microsoft y Tesla fue desestimada en noviembre de 2021, y la apelación lo confirmó en marzo de 2024: el tribunal consideró que no se había probado que las empresas formaran una empresa conjunta con sus proveedores. Que no hubiera condena no significa que no hubiera trabajo infantil: un estudio de Berkeley de 2017 contó más de 4.700 niños en la minería artesanal de 150 comunidades.</p>
+    <details>
+      <summary>Las fuentes originales (2)</summary>
+      <ul class="fuentes">
+        <li><a href="https://www.internationalrightsadvocates.org/cases/cobalt">International Rights Advocates, el caso</a></li>
+        <li><a href="https://www3.weforum.org/docs/WEF_Making_Mining_Safe_2020.pdf">Foro Económico Mundial, Making Mining Safe and Fair, 2020</a></li>
+      </ul>
+    </details>
+    <p class="video">El vídeo: <a href="https://www.youtube.com/watch?v=rTfo0FiF62s">El mito de la PS2 y la guerra del Congo</a></p>
+  </article>
+    <p class="vacio" id="vacio">Ningún mito coincide con la búsqueda.</p>
+  </section>
+
+  <div class="tarjeta final">¿Conoces un mito que deberíamos comprobar? Escribe a <a href="mailto:hola@morci.me">hola@morci.me</a>. Puedes citar estas fichas libremente enlazando aquí. Cada lunes, más en <a href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">la newsletter</a>.</div>
+
+  <footer class="pie">
+    <span>morci, desde Sevilla</span>
+    <span class="enlaces-pie"><a href="mailto:hola@morci.me">hola@morci.me</a><a href="https://www.youtube.com/@morcimorcimorci">YouTube</a><a href="https://www.instagram.com/morcimorcimorcimorci/">Instagram</a><a href="https://www.tiktok.com/@morcimorcimorcimorci">TikTok</a></span>
+  </footer>
+</div>
+<script>
+  const quitar = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const mitos = [...document.querySelectorAll(".mito")];
+  const buscar = document.getElementById("buscar");
+  let veredicto = "";
+  function filtrar() {
+    const q = quitar(buscar.value.trim());
+    let n = 0;
+    for (const m of mitos) {
+      const ok = (!q || quitar(m.textContent).includes(q)) && (!veredicto || m.querySelector(".veredicto").classList.contains(veredicto));
+      m.style.display = ok ? "" : "none";
+      if (ok) n++;
+    }
+    document.getElementById("vacio").style.display = n ? "none" : "block";
+  }
+  buscar.addEventListener("input", filtrar);
+  for (const b of document.querySelectorAll(".filtros button")) b.addEventListener("click", () => {
+    document.querySelectorAll(".filtros button").forEach(x => x.classList.remove("activo"));
+    b.classList.add("activo"); veredicto = b.dataset.v; filtrar();
+  });
+</script>
+</body>
+</html>
