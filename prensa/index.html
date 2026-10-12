@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prensa y charlas | morci</title>
+<meta name="description" content="morci: lo que los videojuegos cuentan de cómo vivimos. Ensayos en vídeo desde Sevilla, con cada dato comprobado en su fuente.">
+
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/estilo.css">
+<style>
+  .cabeza { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: end; padding: 48px 0 36px; }
+  .cabeza .gran { font-size: clamp(40px, 6vw, 72px); }
+  .cabeza p { font-size: 19px; color: var(--ink-2); margin: 20px 0 0; }
+  .contacto { display: flex; flex-direction: column; gap: 10px; }
+  .contacto b { font-size: 22px; letter-spacing: -0.02em; }
+  .contacto span { color: var(--ink-3); font-size: 14px; }
+  h2.seccion { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; margin: 52px 0 16px; }
+  .cifras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .cifras b { display: block; font-size: 38px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
+  .cifras b.rojo { color: var(--ink); }
+  .cifras span { font-size: 14px; color: var(--ink-3); }
+  .publico { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .barra-datos { display: block; height: 10px; border-radius: 6px; background: var(--line); overflow: hidden; margin: 8px 0 4px; }
+  .barra-datos i { display: block; height: 100%; background: var(--ink-3); }
+  .publico p { margin: 0 0 14px; font-size: 15px; }
+  .ofertas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ofertas h3 { font-size: 20px; letter-spacing: -0.02em; margin: 6px 0 8px; }
+  .ofertas p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .ofertas ul { margin: 12px 0 0; padding-left: 18px; color: var(--ink-2); font-size: 15px; }
+  .trabajos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .trabajo { padding: 0; overflow: hidden; text-decoration: none; }
+  .trabajo img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #222; }
+  .trabajo div { padding: 16px 18px 18px; }
+  .trabajo b { display: block; font-size: 16px; letter-spacing: -0.01em; line-height: 1.25; }
+  .trabajo span { font-size: 14px; color: var(--ink-3); }
+  .metodo { font-size: 18px; color: var(--ink-2); max-width: 720px; }
+  .final { margin-top: 52px; background: #ecebe8; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .final h2 { margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.03em; }
+  .final p { margin: 6px 0 0; color: var(--ink-2); }
+  @media (max-width: 760px) {
+    .cabeza, .publico, .ofertas, .trabajos { grid-template-columns: 1fr; }
+    .cifras { grid-template-columns: 1fr 1fr; }
+    .cabeza { padding-top: 24px; }
+  }
+</style>
+<style>
+  /* Como la app: grises, y un único acento azul apagado en dos detalles. */
+  .marca span { color: #3d6ea1; }
+  .boletin { background: #f1f4f8; border-color: #dfe6ee; }
+  .barra-datos i { background: #8fa9c6; }
+</style>
+</head>
+<body>
+<div class="envoltorio">
+  <nav class="barra">
+    <a class="marca" href="/">morci<span>.</span></a>
+    <div class="menu"><a href="https://www.youtube.com/@morcimorcimorci">Vídeos</a><a href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">Newsletter</a><a class="activo" href="/prensa/">Prensa</a></div>
+  </nav>
+
+  <header class="cabeza">
+    <div>
+      <span class="etiqueta">Prensa, charlas y colaboraciones</span>
+      <h1 class="gran">Los videojuegos, <em>leídos en serio.</em></h1>
+      <p class="serif">Fran, de morci: divulgador en Sevilla. Ensayos en vídeo que leen los videojuegos desde la sociología, la política y la historia, y desmontan mitos con los documentos originales.</p>
+    </div>
+    <div class="tarjeta contacto">
+      <span>Para hablar de cualquier cosa</span>
+      <b><a href="mailto:hola@morci.me">hola@morci.me</a></b>
+      <a class="boton rojo" href="mailto:hola@morci.me">Escribirme</a>
+    </div>
+  </header>
+
+  <h2 class="seccion">En cifras</h2>
+  <div class="cifras">
+    <div class="tarjeta"><b class="rojo">192.000</b><span>visualizaciones en 2026</span></div>
+    <div class="tarjeta"><b>1.530</b><span>suscriptores en YouTube</span></div>
+    <div class="tarjeta"><b>2.300</b><span>seguidores en Instagram</span></div>
+    <div class="tarjeta"><b>1.600</b><span>seguidores en TikTok</span></div>
+  </div>
+  <div class="publico">
+    <div class="tarjeta">
+      <span class="etiqueta">Quién me ve</span>
+      <p>De 25 a 34 años <b>54 %</b><span class="barra-datos"><i style="width:54%"></i></span></p>
+      <p>De 35 a 44 años <b>24 %</b><span class="barra-datos"><i style="width:24%"></i></span></p>
+    </div>
+    <div class="tarjeta">
+      <span class="etiqueta">Desde dónde</span>
+      <p>España <b>42 %</b><span class="barra-datos"><i style="width:42%"></i></span></p>
+      <p>Argentina, México, Chile, Perú y Colombia <b>35 %</b><span class="barra-datos"><i style="width:35%"></i></span></p>
+    </div>
+  </div>
+
+  <h2 class="seccion">Qué hago</h2>
+  <div class="ofertas">
+    <div class="tarjeta"><span class="etiqueta">En directo</span><h3>Charlas y talleres</h3><p>Para centros culturales, universidades, festivales y bibliotecas. Pensadas también para quien nunca ha jugado.</p><ul><li>Charla de una hora con coloquio</li><li>Taller «Leer un videojuego»</li><li>Ciclos de varias sesiones</li></ul></div>
+    <div class="tarjeta"><span class="etiqueta">En medios</span><h3>Radio, pódcast y artículos</h3><p>Secciones fijas, entrevistas y textos sobre lo que los videojuegos cuentan de la actualidad.</p><ul><li>Secciones de radio y pódcast</li><li>Artículos y reportajes</li><li>Comentario de actualidad</li></ul></div>
+    <div class="tarjeta"><span class="etiqueta">Por encargo</span><h3>Investigación y guion</h3><p>El mismo método de los vídeos, para tu proyecto: documentación con fuentes comprobadas y guiones.</p><ul><li>Dossier de investigación</li><li>Guion de vídeo</li><li>Menciones de marca en mis vídeos</li></ul></div>
+  </div>
+
+  <h2 class="seccion">Algunos trabajos</h2>
+  <div class="trabajos">
+    <a class="tarjeta trabajo" href="https://www.youtube.com/watch?v=rTfo0FiF62s"><img src="https://i.ytimg.com/vi/rTfo0FiF62s/maxresdefault.jpg" alt=""><div><b>El mito de la PS2 y la guerra del Congo</b><span>Un mito de veinte años, desmontado con documentos</span></div></a>
+    <a class="tarjeta trabajo" href="https://www.youtube.com/watch?v=8py_OvG5QnY"><img src="https://i.ytimg.com/vi/8py_OvG5QnY/maxresdefault.jpg" alt=""><div><b>This War of Mine y lo que de verdad salvó a Sarajevo</b><span>Historia, antropología y un videojuego</span></div></a>
+    <a class="tarjeta trabajo" href="https://www.youtube.com/watch?v=SPK6SYt4QA0"><img src="https://i.ytimg.com/vi/SPK6SYt4QA0/maxresdefault.jpg" alt=""><div><b>Los Sims: la promesa rota del capitalismo</b><span>La casa que ya no podemos pagar</span></div></a>
+  </div>
+
+  <h2 class="seccion">Cómo trabajo</h2>
+  <p class="metodo serif">Cada vídeo sale de una investigación con fuentes primarias: informes, prensa de la época, estudios académicos y entrevistas. Lo que no puedo comprobar no entra. Por eso mis vídeos sirven también como documentación, y por eso los mitos que desmonto se pueden citar.</p>
+
+  <div class="tarjeta final">
+    <div><h2>¿Hablamos?</h2><p>Tarifas y disponibilidad, por correo.</p></div>
+    <a class="boton rojo" href="mailto:hola@morci.me">hola@morci.me</a>
+  </div>
+
+  <footer class="pie">
+    <span>morci, desde Sevilla</span>
+    <span class="enlaces-pie"><a href="https://www.youtube.com/@morcimorcimorci">YouTube</a><a href="https://www.instagram.com/morcimorcimorcimorci/">Instagram</a><a href="https://www.tiktok.com/@morcimorcimorcimorci">TikTok</a><a href="https://www.patreon.com/morcimorcimorci">Patreon</a></span>
+  </footer>
+</div>
+</body>
+</html>
