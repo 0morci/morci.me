@@ -43,6 +43,9 @@ a { color: inherit; }
 .alta input[type=email] { flex: 1; min-width: 0; font: inherit; font-size: 15px; border: 0; padding: 0 14px; background: transparent; outline: none; }
 .alta button { font: inherit; font-weight: 600; font-size: 14px; padding: 12px 18px; border-radius: 999px; border: 0; background: var(--ink); color: #fff; cursor: pointer; white-space: nowrap; }
 .alta .oculto { display: none; }
+.alta button:disabled { opacity: .6; cursor: default; }
+.alta-ok { padding: 14px 20px; border-radius: 999px; background: var(--suave); border: 1px solid var(--suave-borde); color: var(--ink); font-size: 15px; }
+.alta-ok b { color: var(--acento); }
 
 /* Pie con columnas */
 .pie { margin-top: 88px; border-top: 1px solid var(--line); padding: 32px 0 44px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; font-size: 14px; }
@@ -64,4 +67,5 @@ a { color: inherit; }
   .alta { border-radius: 14px; flex-direction: column; }
   .alta input[type=email] { padding: 12px; }
   .alta button { border-radius: 10px; }
+  .alta-ok { border-radius: 14px; }
 }
