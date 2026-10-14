@@ -1,0 +1,79 @@
+/* Páginas de vídeo y /videos/ (las genera ../fuente/generar.py). */
+  .marca span { color: #3d6ea1; }
+  .cabeza { padding: 44px 0 26px; }
+  .cabeza .gran { font-size: clamp(36px, 5.6vw, 64px); margin-top: 10px; max-width: 900px; }
+  .entradilla { font-size: clamp(18px, 2.2vw, 21px); color: var(--ink-2); max-width: 700px; margin: 20px 0 8px; }
+  .fecha { font-size: 14px; color: var(--ink-3); margin: 0; }
+
+  /* Vídeo y capítulos */
+  .reproductor { display: grid; grid-template-columns: 1fr 300px; gap: 16px; align-items: start; }
+  .pantalla { position: relative; aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; background: #111; border: 1px solid var(--line); }
+  .pantalla button { all: unset; cursor: pointer; position: absolute; inset: 0; display: block; }
+  .pantalla img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pantalla .play { position: absolute; left: 50%; top: 50%; width: 76px; height: 54px; margin: -27px 0 0 -38px; border-radius: 14px; background: rgba(20,20,20,.86); display: grid; place-items: center; transition: background .15s; }
+  .pantalla button:hover .play, .pantalla button:focus-visible .play { background: #3d6ea1; }
+  .pantalla .play::after { content: ""; border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
+  .pantalla iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .capitulos { padding: 18px 8px 10px; }
+  .capitulos .etiqueta { padding: 0 12px; }
+  .capitulos ol { list-style: none; margin: 10px 0 0; padding: 0; }
+  .capitulos a { display: flex; gap: 12px; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-size: 15px; line-height: 1.35; color: var(--ink-2); }
+  .capitulos a:hover { background: var(--canvas); color: var(--ink); }
+  .capitulos time { flex: none; width: 40px; font-variant-numeric: tabular-nums; color: #3d6ea1; font-weight: 500; }
+
+  /* Secciones */
+  .seccion { margin-top: 56px; }
+  .seccion > h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin: 6px 0 20px; }
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .idea .num { font-size: 13px; font-weight: 600; color: #3d6ea1; }
+  .idea h3 { font-size: 21px; letter-spacing: -0.02em; line-height: 1.15; margin: 6px 0 10px; }
+  .idea p { font-family: Newsreader, Georgia, serif; font-size: 17.5px; line-height: 1.55; margin: 0 0 10px; color: var(--ink); }
+  .idea .cita-fuente, .cita-fuente { font-family: Geist, system-ui, sans-serif; font-size: 13px; line-height: 1.5; color: var(--ink-3); margin-top: 6px; }
+  .cita-fuente a { color: var(--ink-3); }
+
+  .datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .dato b { display: block; font-size: clamp(28px, 3.4vw, 38px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; }
+  .dato p { margin: 10px 0 0; font-size: 15.5px; color: var(--ink-2); }
+  .dato .cita-fuente { margin-top: 12px; }
+
+  .voces { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+  .voz { padding: 16px 0; border-top: 1px solid var(--line); }
+  .voz h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
+  .voz p { margin: 4px 0 0; font-size: 15px; color: var(--ink-2); }
+  .voz a { color: var(--ink); font-weight: 500; }
+
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .dos a.tarjeta { text-decoration: none; display: flex; flex-direction: column; }
+  .dos h3 { font-family: Newsreader, Georgia, serif; font-size: 23px; line-height: 1.25; font-weight: 600; margin: 8px 0 10px; }
+  .dos p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .veredicto { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 8px; border: 1px solid; margin-top: 4px; }
+  .veredicto.falso { color: #9a3a33; background: #f8ecea; border-color: #ead0cc; }
+  .veredicto.parte { color: #7c6430; background: #f7f3e8; border-color: #e6dcc0; }
+  .veredicto.cierto { color: #2f6b4b; background: #ebf5ef; border-color: #c9e2d3; }
+  .flecha { color: var(--ink); font-weight: 600; font-size: 14px; margin-top: auto; padding-top: 14px; }
+  .miembros { background: #f1f4f8; border-color: #dfe6ee; }
+
+  details.fuentes { margin-top: 0; }
+  details.fuentes summary { cursor: pointer; font-weight: 600; font-size: 16px; }
+  details.fuentes h4 { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 22px 0 6px; }
+  details.fuentes ul { margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+  details.fuentes ul a { color: var(--ink); }
+  .nota { font-size: 14px; color: var(--ink-3); margin: 18px 0 0; }
+  .nota a { color: var(--ink-2); }
+
+  /* /videos/ */
+  .rejilla-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .vid { padding: 0; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; }
+  .vid img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #222; }
+  .vid .t { padding: 14px 16px 16px; }
+  .vid h3 { font-size: 17px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 6px; }
+  .vid p { margin: 0; font-size: 13px; color: var(--ink-3); }
+  .vid .con-pagina { color: #3d6ea1; font-weight: 500; }
+  .vid:hover h3 { text-decoration: underline; }
+  .final-videos { margin-top: 40px; background: #f1f4f8; border-color: #dfe6ee; color: var(--ink-2); font-size: 15px; }
+  .final-videos a { color: var(--ink); font-weight: 500; }
+
+  @media (max-width: 900px) { .reproductor { grid-template-columns: 1fr; } .tres, .datos { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .cabeza { padding-top: 24px; } .tres, .datos, .voces, .dos { grid-template-columns: 1fr; } .seccion { margin-top: 44px; } }
+  @media (max-width: 900px) { .rejilla-videos { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .rejilla-videos { grid-template-columns: 1fr; } }
