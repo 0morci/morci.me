@@ -3,6 +3,8 @@
   --canvas: #f4f4f3; --surface: #ffffff; --line: #e4e4e2; --line-strong: #d6d6d3;
   --ink: #1a1a1a; --ink-2: #4a4a4a; --ink-3: #6b6b6b;
   --rojo: #a63d36; --rojo-bg: #faeae8;
+  /* El punto de «morci.» es el rojo del logo; los acentos, el rojo apagado de la app. */
+  --marca: #ce0a10; --acento: #a63d36; --acento-claro: #d19590; --suave: #f7efed; --suave-borde: #ecd9d6;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -13,7 +15,7 @@ a { color: inherit; }
 /* Barra */
 .barra { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
 .marca { font-weight: 800; font-size: 22px; letter-spacing: -0.03em; text-decoration: none; }
-.marca span { color: var(--rojo); }
+.marca span { color: var(--marca); }
 .menu { display: flex; gap: 22px; font-size: 15px; }
 .menu a { text-decoration: none; color: var(--ink-2); }
 .menu a:hover, .menu a.activo { color: var(--ink); }

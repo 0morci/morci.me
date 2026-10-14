@@ -8,8 +8,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="morci: lo que los videojuegos cuentan de cómo vivimos. Ensayos en vídeo desde Sevilla, con cada dato comprobado en su fuente.">
 
+<link rel="icon" href="/icono.svg" type="image/svg+xml">
 <link rel="icon" href="/icono.png" type="image/png">
-<link rel="apple-touch-icon" href="/icono.png">
+<link rel="apple-touch-icon" href="/icono-apple.png">
 <script data-goatcounter="https://morci.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/estilo.css">
@@ -41,10 +42,9 @@
   @media (max-width: 760px) { .rejilla, .tres { grid-template-columns: 1fr; } .portada { padding-top: 28px; } }
 </style>
 <style>
-  /* Como la app: grises, y un único acento azul apagado en dos detalles. */
-  .marca span { color: #3d6ea1; }
-  .boletin { background: #f1f4f8; border-color: #dfe6ee; }
-  .barra-datos i { background: #8fa9c6; }
+  /* Como la app: grises, y el rojo apagado de acento. */
+  .boletin { background: var(--suave); border-color: var(--suave-borde); }
+  .barra-datos i { background: var(--acento-claro); }
 </style>
 </head>
 <body>
