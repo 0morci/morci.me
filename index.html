@@ -3,102 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>morci</title>
+<title>morci: lo que los videojuegos cuentan de cómo vivimos</title>
+<meta name="description" content="Ensayos en vídeo desde Sevilla: cojo un videojuego que conoce todo el mundo y lo leo desde la sociología, la política y la historia, con cada dato comprobado en su fuente.">
+<link rel="canonical" href="https://morci.me/">
+<meta property="og:title" content="morci: lo que los videojuegos cuentan de cómo vivimos">
+<meta property="og:description" content="Ensayos en vídeo desde Sevilla, con cada dato comprobado en su fuente.">
+<meta property="og:url" content="https://morci.me/">
 <meta property="og:image" content="https://morci.me/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="morci: lo que los videojuegos cuentan de cómo vivimos. Ensayos en vídeo desde Sevilla, con cada dato comprobado en su fuente.">
-
 <link rel="icon" href="/icono.svg" type="image/svg+xml">
 <link rel="icon" href="/icono.png" type="image/png">
 <link rel="apple-touch-icon" href="/icono-apple.png">
 <script data-goatcounter="https://morci.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/estilo.css">
-<style>
-  .portada { padding: 56px 0 40px; }
-  .portada .gran { font-size: clamp(42px, 7vw, 84px); }
-  .entradilla { font-size: clamp(19px, 2.4vw, 23px); color: var(--ink-2); max-width: 640px; margin: 26px 0 30px; }
-  .acciones { display: flex; gap: 12px; flex-wrap: wrap; }
-  .rejilla { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; margin-top: 26px; }
-  .video { padding: 0; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; }
-  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #222; }
-  .video .texto { padding: 20px 24px 24px; }
-  .video h2 { font-size: 24px; letter-spacing: -0.02em; line-height: 1.15; margin: 8px 0 6px; }
-  .video p { margin: 0; color: var(--ink-3); font-size: 15px; }
-  .boletin { background: #ecebe8; border-color: var(--line); display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
-  .boletin h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin: 8px 0 10px; }
-  .boletin p { margin: 0; color: var(--ink-2); font-size: 16px; }
-  
-  .boletin form { display: flex; gap: 8px; }
-  .boletin input { flex: 1; min-width: 0; font: inherit; font-size: 15px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line-strong); background: #fff; }
-  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
-  .tres a { text-decoration: none; }
-  .tres h3 { font-size: 20px; letter-spacing: -0.02em; margin: 6px 0 6px; }
-  .tres p { margin: 0; color: var(--ink-3); font-size: 15px; }
-  .flecha { color: var(--ink); font-weight: 600; font-size: 14px; margin-top: 14px; display: inline-block; }
-  .cifras { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); }
-  .cifras b { display: block; font-size: 30px; font-weight: 700; letter-spacing: -0.03em; }
-  .cifras span { font-size: 13px; color: var(--ink-3); }
-  @media (max-width: 760px) { .rejilla, .tres { grid-template-columns: 1fr; } .portada { padding-top: 28px; } }
-</style>
-<style>
-  /* Como la app: grises, y el rojo apagado de acento. */
-  .boletin { background: var(--suave); border-color: var(--suave-borde); }
-  .barra-datos i { background: var(--acento-claro); }
-</style>
+<link rel="stylesheet" href="/portada.css">
 </head>
 <body>
 <div class="envoltorio">
   <nav class="barra">
     <a class="marca" href="/">morci<span>.</span></a>
-    <div class="menu"><a href="/videos/">Vídeos</a><a href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">Newsletter</a><a href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a></div>
+    <div class="derecha">
+      <div class="menu"><a href="/videos/">Vídeos</a><a href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a><a class="ancho" href="https://www.patreon.com/morcimorcimorci">Patreon</a></div>
+      <a class="apuntate" href="/#newsletter">Newsletter</a>
+    </div>
   </nav>
 
-  <header class="portada">
-    <h1 class="gran">Lo que los videojuegos cuentan de <em>cómo vivimos.</em></h1>
-    <p class="entradilla serif">Soy Fran, desde Sevilla. Cojo un videojuego y lo leo desde la sociología, la política y la historia, con cada dato comprobado en su fuente original.</p>
-    <div class="acciones">
-      <a class="boton lleno" href="https://www.youtube.com/@morcimorcimorci">Ver el canal</a>
-      <a class="boton" href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">Apúntate a la newsletter</a>
-      <a class="boton" href="https://www.patreon.com/morcimorcimorci">Patreon</a>
+  <header class="heroe">
+    <span class="rotulo"><i>●</i> Ensayos en vídeo, desde Sevilla</span>
+    <h1>Lo que los videojuegos cuentan de <span>cómo vivimos</span><b>.</b></h1>
+    <div class="bajo">
+      <p>Soy Fran. Cojo un videojuego que conoce todo el mundo y lo leo desde la sociología, la política y la historia. Cada dato, comprobado en su fuente original.</p>
+      <div id="newsletter">
+        <form class="alta" action="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==" method="post"><input type="email" name="EMAIL" required placeholder="Tu correo, para la newsletter de los lunes" aria-label="Tu correo"><input class="oculto" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="locale" value="es"><button type="submit">Apuntarme</button></form>
+        <p class="alta-nota">Gratis. Cada lunes, cinco cosas que han pasado en los videojuegos.</p>
+      </div>
     </div>
   </header>
 
-  <section class="rejilla">
-    <a class="tarjeta video" href="/this-war-of-mine/">
-      <img src="https://i.ytimg.com/vi/8py_OvG5QnY/maxresdefault.jpg" alt="Miniatura del último vídeo">
-      <div class="texto">
-        <span class="etiqueta">El último vídeo</span>
-        <h2>This War of Mine y lo que de verdad salvó a Sarajevo</h2>
-        <p>Un juego nacido del «sálvese quien pueda» que acaba enseñando que en solitario no se sobrevive.</p>
-      </div>
-    </a>
-    <div class="tarjeta boletin">
-      <div>
-        <span class="etiqueta">Lo que se juega</span>
-        <h2>Cada lunes, en tu correo.</h2>
-        <p>Cinco cosas que han pasado en los videojuegos y lo que cuentan de cómo vivimos. Gratis.</p>
-      </div>
-      <a class="boton lleno" href="https://90911b9f.sibforms.com/serve/MUIFAOJhGLDIkd1Op_wM4sp_jRWgg-E_3Uavysx423-rnKyLqB4Tkof3I7sOZAKIKGGj04JODbxVFyf1uQMntpcqcLVgiP1oml7AA7VRwy17KV7dNHaJobrDLBe5zxmGn8Ejzogios5ztdwJvKbTOKLF62UFPnsGITaYHIsHtorsXSn3jEPXynBLNX5bfDNiHJsQidjyLhIk19g-OA==">Apuntarme gratis</a>
+  <a class="destacado" href="/this-war-of-mine/">
+    <img src="https://i.ytimg.com/vi/8py_OvG5QnY/maxresdefault.jpg" alt="Portada del vídeo: Juntos, Sarajevo, 1992">
+    <div class="sobre">
+      <span class="rotulo">El último vídeo, 15 minutos</span>
+      <h2>This War of Mine y lo que de verdad salvó a Sarajevo</h2>
+      <p>Un juego que nace de un texto de supervivencialistas y castiga justo el sálvese quien pueda.</p>
+      <span class="ver"><span class="play"></span>Verlo, con sus datos y fuentes</span>
     </div>
-  </section>
+  </a>
 
-  <section class="tres">
-    <a class="tarjeta" href="https://www.youtube.com/@morcimorcimorci/videos"><span class="etiqueta">Todos los vídeos</span><h3>Los Sims, la PS2, Sarajevo…</h3><p>Ensayos sobre juegos que conoce todo el mundo y lo que dicen de nosotros.</p><span class="flecha">Ir al canal →</span></a>
-    <a class="tarjeta" href="https://www.patreon.com/morcimorcimorci"><span class="etiqueta">Patreon</span><h3>Lo que no cabe en un vídeo</h3><p>Cada lunes, un texto largo para miembros, y el dossier de fuentes de cada vídeo.</p><span class="flecha">Hacerte miembro →</span></a>
-    <a class="tarjeta" href="/prensa/"><span class="etiqueta">Prensa y charlas</span><h3>¿Quieres contar conmigo?</h3><p>Charlas, radio, artículos, encargos de investigación y colaboraciones.</p><span class="flecha">Ver cómo trabajo →</span></a>
-  </section>
-
-  <div class="cifras">
+  <section class="cifras">
     <div><b>192.000</b><span>visualizaciones en 2026</span></div>
     <div><b>1.530</b><span>suscriptores en YouTube</span></div>
-    <div><b>2.300</b><span>en Instagram</span></div>
-    <div><b>1.600</b><span>en TikTok</span></div>
-  </div>
+    <div><b>11</b><span>ensayos en vídeo</span></div>
+    <div><b>4</b><span>mitos comprobados</span></div>
+  </section>
+
+  <div class="cab"><div><span class="rotulo">Lo que hago</span><h2>Vídeos, mitos y charlas. <span>Todo con sus fuentes.</span></h2></div></div>
+  <section class="hago">
+    <a href="/videos/"><span class="rotulo">01 Vídeos</span><h3>Ensayos de 10 a 15 minutos</h3><p>Los Sims, la PS2, Sarajevo… Los nuevos, cada uno con su página: datos, capítulos y todas las fuentes.</p><span class="flecha">Ver los vídeos →</span></a>
+    <a href="/mitos/"><span class="rotulo">02 Mitos</span><h3>Comprobados con el documento</h3><p>Historias que se repiten sobre videojuegos, contrastadas con la fuente original. Para citar.</p><span class="flecha">Ver los mitos →</span></a>
+    <a href="/prensa/"><span class="rotulo">03 Prensa</span><h3>Charlas, radio y encargos</h3><p>El mismo método de los vídeos para centros culturales, medios y proyectos de investigación.</p><span class="flecha">Cómo trabajo →</span></a>
+  </section>
+
+  <div class="cab"><div><span class="rotulo">Vídeos</span><h2>Lo último</h2></div><a href="/videos/">Los 11 vídeos →</a></div>
+  <section class="vids">
+    <a href="/ps2-coltan-congo/"><img src="https://i.ytimg.com/vi/rTfo0FiF62s/mqdefault.jpg" alt="" loading="lazy"><span class="rotulo">29 sep 2026</span><h3>El mito de la PS2 y la guerra del Congo</h3></a>
+    <a href="https://www.youtube.com/watch?v=lLVb899fIDE"><img src="https://i.ytimg.com/vi/lLVb899fIDE/mqdefault.jpg" alt="" loading="lazy"><span class="rotulo">30 ago 2026</span><h3>Pokémon: la amistad que empieza con una paliza</h3></a>
+    <a href="https://www.youtube.com/watch?v=bqylBpzOYgE"><img src="https://i.ytimg.com/vi/bqylBpzOYgE/mqdefault.jpg" alt="" loading="lazy"><span class="rotulo">24 ago 2026</span><h3>El que cuida siempre tiene la culpa (y Overwatch lo sabe)</h3></a>
+  </section>
+
+  <section class="cierre">
+    <div><span class="rotulo">Patreon</span><h2>Lo que no cabe en un vídeo.</h2><p>Cada lunes, un texto largo para miembros, y el dossier de fuentes de cada vídeo. Desde 3 € al mes.</p></div>
+    <div><a class="boton lleno" href="https://www.patreon.com/morcimorcimorci">Hacerte miembro</a></div>
+  </section>
 
   <footer class="pie">
-    <span>morci, desde Sevilla</span>
-    <span class="enlaces-pie"><a href="mailto:hola@morci.me">hola@morci.me</a><a href="https://www.youtube.com/@morcimorcimorci">YouTube</a><a href="https://www.instagram.com/morcimorcimorcimorci/">Instagram</a><a href="https://www.tiktok.com/@morcimorcimorcimorci">TikTok</a></span>
+    <div><a class="marca" href="/">morci<span>.</span></a><p>Lo que los videojuegos cuentan de cómo vivimos. Desde Sevilla.</p></div>
+    <div><h4>La web</h4><a href="/videos/">Vídeos</a><a href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a><a href="/#newsletter">Newsletter</a></div>
+    <div><h4>Sígueme</h4><a href="https://www.youtube.com/@morcimorcimorci">YouTube</a><a href="https://www.instagram.com/morcimorcimorcimorci/">Instagram</a><a href="https://www.tiktok.com/@morcimorcimorcimorci">TikTok</a><a href="https://www.patreon.com/morcimorcimorci">Patreon</a></div>
+    <div><h4>Contacto</h4><a href="mailto:hola@morci.me">hola@morci.me</a></div>
   </footer>
 </div>
 </body>

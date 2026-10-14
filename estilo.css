@@ -1,4 +1,5 @@
-/* morci.me: el estilo de la app (gris claro, tarjetas blancas, Geist) con un acento rojo y titulares grandes. */
+/* morci.me: el estilo de la app (gris claro, tarjetas blancas, Geist) llevado a web (maqueta C «Limpio», 14-10-2026):
+   titulares enormes, mucho aire, rótulos pequeños en Geist Mono y el rojo apagado de acento. */
 :root {
   --canvas: #f4f4f3; --surface: #ffffff; --line: #e4e4e2; --line-strong: #d6d6d3;
   --ink: #1a1a1a; --ink-2: #4a4a4a; --ink-3: #6b6b6b;
@@ -10,34 +11,57 @@
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--canvas); color: var(--ink); font-family: Geist, "Helvetica Neue", Helvetica, system-ui, sans-serif; line-height: 1.5; }
 a { color: inherit; }
-.envoltorio { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.envoltorio { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
-/* Barra */
-.barra { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+/* Barra: menú y la píldora de la newsletter */
+.barra { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
 .marca { font-weight: 800; font-size: 22px; letter-spacing: -0.03em; text-decoration: none; }
 .marca span { color: var(--marca); }
+.barra .derecha { display: flex; align-items: center; gap: 26px; }
 .menu { display: flex; gap: 22px; font-size: 15px; }
 .menu a { text-decoration: none; color: var(--ink-2); }
 .menu a:hover, .menu a.activo { color: var(--ink); }
 .menu a.activo { box-shadow: inset 0 -2px 0 var(--ink); }
+.apuntate { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 999px; background: var(--ink); color: #fff; white-space: nowrap; }
+.apuntate:hover { background: #000; }
 
-/* Titulares */
+/* Titulares y rótulos */
 .gran { font-weight: 700; letter-spacing: -0.035em; line-height: 1; margin: 0; }
 .gran em { font-style: normal; color: var(--ink-3); }
 .serif { font-family: Newsreader, Georgia, serif; }
-.etiqueta { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.etiqueta, .rotulo { display: inline-block; font-family: "Geist Mono", ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.rotulo i { font-style: normal; color: var(--acento); }
 
-/* Tarjetas */
-.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-.boton { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; padding: 12px 18px; border-radius: 10px; text-decoration: none; border: 1px solid var(--ink); white-space: nowrap; }
+/* Tarjetas y botones */
+.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.boton { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; padding: 12px 18px; border-radius: 999px; text-decoration: none; border: 1px solid var(--ink); white-space: nowrap; }
 .boton.lleno { background: var(--ink); color: #fff; }
 .boton.rojo { background: var(--ink); border-color: var(--ink); color: #fff; }
-.pie { border-top: 1px solid var(--line); margin-top: 64px; padding: 26px 0 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--ink-3); }
-.pie a { color: var(--ink-2); }
-.enlaces-pie { display: flex; gap: 18px; flex-wrap: wrap; }
 
+/* La casilla de la newsletter (envía a Brevo) */
+.alta { display: flex; gap: 8px; padding: 6px; border: 1px solid var(--line-strong); border-radius: 999px; background: #fff; }
+.alta input[type=email] { flex: 1; min-width: 0; font: inherit; font-size: 15px; border: 0; padding: 0 14px; background: transparent; outline: none; }
+.alta button { font: inherit; font-weight: 600; font-size: 14px; padding: 12px 18px; border-radius: 999px; border: 0; background: var(--ink); color: #fff; cursor: pointer; white-space: nowrap; }
+.alta .oculto { display: none; }
+
+/* Pie con columnas */
+.pie { margin-top: 88px; border-top: 1px solid var(--line); padding: 32px 0 44px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; font-size: 14px; }
+.pie p { color: var(--ink-3); margin: 8px 0 0; max-width: 280px; }
+.pie h4 { font-family: "Geist Mono", ui-monospace, monospace; font-weight: 500; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); margin: 6px 0 10px; }
+.pie a { display: block; color: var(--ink-2); text-decoration: none; padding: 3px 0; }
+.pie a:hover { color: var(--acento); }
+.pie a.marca { color: var(--ink); padding: 0; }
+
+@media (max-width: 900px) {
+  .pie { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 640px) {
   .envoltorio { padding: 0 16px; }
   .barra { flex-wrap: wrap; gap: 10px; }
-  .menu { gap: 14px; font-size: 14px; flex-wrap: wrap; }
+  .barra .derecha { gap: 14px; }
+  .menu { gap: 14px; font-size: 14px; }
+  .menu .ancho { display: none; }
+  .alta { border-radius: 14px; flex-direction: column; }
+  .alta input[type=email] { padding: 12px; }
+  .alta button { border-radius: 10px; }
 }

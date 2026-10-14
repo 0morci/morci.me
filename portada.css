@@ -1,0 +1,65 @@
+  /* Portada (maqueta C «Limpio», elegida el 14-10-2026). La genera ../fuente/generar.py. */
+
+  .heroe { padding: 96px 0 64px; }
+  .heroe h1 { font-size: clamp(48px, 8.2vw, 112px); font-weight: 700; letter-spacing: -0.05em; line-height: .95; margin: 22px 0 0; max-width: 1040px; }
+  .heroe h1 span { color: var(--ink-3); }
+  .heroe h1 b { color: var(--marca); }
+  .heroe .bajo { display: grid; grid-template-columns: 1fr 440px; gap: 48px; align-items: end; margin-top: 44px; }
+  .heroe p { font-family: Newsreader, Georgia, serif; font-size: 22px; line-height: 1.45; color: var(--ink-2); margin: 0; max-width: 560px; }
+  .heroe .alta-nota { font-family: Geist, system-ui, sans-serif; font-size: 13px; color: var(--ink-3); margin: 10px 0 0 18px; }
+
+  /* El vídeo destacado: la portada entera (lleva su propio texto) y el titular al lado, sobre negro */
+  .destacado { display: grid; grid-template-columns: 1.55fr 1fr; border-radius: 18px; overflow: hidden; text-decoration: none; background: #141414; color: #fff; }
+  .destacado img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .destacado .sobre { padding: 36px; display: flex; flex-direction: column; }
+  .destacado .rotulo { color: #a9a9a6; }
+  .destacado h2 { font-size: clamp(26px, 2.8vw, 38px); letter-spacing: -0.035em; line-height: 1.04; margin: 12px 0 14px; }
+  .destacado p { font-family: Newsreader, Georgia, serif; font-size: 18px; line-height: 1.45; color: #cfcfcc; margin: 0; }
+  .destacado .ver { margin-top: auto; padding-top: 22px; display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 15px; }
+  .destacado .play { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--marca); display: grid; place-items: center; }
+  .destacado .play::after { content: ""; border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent #fff; margin-left: 3px; }
+
+  /* Cifras grandes en fila */
+  .cifras { display: grid; grid-template-columns: repeat(4, 1fr); margin: 72px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .cifras div { padding: 28px 0 28px 24px; border-left: 1px solid var(--line); }
+  .cifras div:first-child { border-left: 0; padding-left: 0; }
+  .cifras b { display: block; font-size: clamp(34px, 4.4vw, 56px); font-weight: 700; letter-spacing: -0.045em; line-height: 1; }
+  .cifras span { font-size: 14px; color: var(--ink-3); }
+
+  /* Tres cosas que hago */
+  .cab { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin: 96px 0 28px; }
+  .cab h2 { font-size: clamp(30px, 3.6vw, 46px); letter-spacing: -0.04em; line-height: 1; margin: 10px 0 0; max-width: 680px; }
+  .cab h2 span { color: var(--ink-3); }
+  .cab a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .hago { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .hago a { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px; text-decoration: none; display: flex; flex-direction: column; min-height: 230px; transition: border-color .15s; }
+  .hago a:hover { border-color: var(--ink); }
+  .hago h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 8px; }
+  .hago p { color: var(--ink-2); font-size: 15px; margin: 0; }
+  .hago .flecha { margin-top: auto; padding-top: 18px; font-size: 14px; font-weight: 600; }
+
+  .vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 20px; }
+  .vids a { text-decoration: none; }
+  .vids img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; display: block; }
+  .vids .rotulo { display: block; margin-top: 14px; }
+  .vids h3 { font-size: 18px; letter-spacing: -0.02em; line-height: 1.2; margin: 6px 0 0; }
+
+  .cierre { margin-top: 96px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 56px; display: grid; grid-template-columns: 1fr 440px; gap: 40px; align-items: center; }
+  .cierre h2 { font-size: clamp(30px, 3.6vw, 48px); letter-spacing: -0.04em; line-height: 1; margin: 12px 0 12px; }
+  .cierre p { margin: 0; color: var(--ink-2); font-size: 16px; }
+
+  @media (max-width: 900px) {
+    .heroe .bajo, .cierre, .destacado { grid-template-columns: 1fr; }
+    .cifras { grid-template-columns: 1fr 1fr; }
+    .cifras div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .cifras div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .hago, .vids { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .heroe { padding: 48px 0 40px; }
+    .destacado .sobre { padding: 22px; }
+    .hago, .vids { grid-template-columns: 1fr; }
+    .cab { flex-direction: column; align-items: start; margin-top: 64px; }
+    .cierre { padding: 28px; }
+  }
+  .cierre .boton { width: 100%; justify-content: center; padding: 16px; }
