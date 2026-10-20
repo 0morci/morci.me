@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charlas | morci</title>
+<meta property="og:image" content="https://morci.me/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Charlas de morci: lo que los videojuegos cuentan de cómo vivimos. Para centros culturales, festivales, jornadas, bibliotecas y universidades, en toda España o en remoto.">
+
+<link rel="icon" href="/icono.svg" type="image/svg+xml">
+<link rel="icon" href="/icono.png" type="image/png">
+<link rel="apple-touch-icon" href="/icono-apple.png">
+<script data-goatcounter="https://morci.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/estilo.css">
+<style>
+  .cabeza { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: end; padding: 48px 0 36px; }
+  .cabeza .gran { font-size: clamp(40px, 6vw, 72px); }
+  .cabeza p { font-size: 19px; color: var(--ink-2); margin: 20px 0 0; }
+  .contacto { display: flex; flex-direction: column; gap: 10px; }
+  .contacto b { font-size: 22px; letter-spacing: -0.02em; }
+  .contacto span { color: var(--ink-3); font-size: 14px; }
+  .contacto .pdf { font-size: 15px; color: var(--ink-2); }
+  h2.seccion { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; margin: 52px 0 16px; }
+  .intro { font-size: 18px; color: var(--ink-2); max-width: 760px; margin: -4px 0 20px; }
+  .formatos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .formatos h3 { font-size: 20px; letter-spacing: -0.02em; margin: 6px 0 4px; }
+  .formatos .dura { display: block; font-size: 14px; color: var(--ink-3); margin-bottom: 8px; }
+  .formatos p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .charlas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .charla { padding: 0; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; }
+  .charla img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #222; }
+  .charla div { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .charla b { font-size: 17px; letter-spacing: -0.01em; line-height: 1.25; }
+  .charla p { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .charla small { font-family: "Geist Mono", monospace; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-3); }
+  .practico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .practico p { margin: 6px 0 0; color: var(--ink-2); font-size: 15px; }
+  .final { margin-top: 52px; background: #ecebe8; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .final h2 { margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.03em; }
+  .final p { margin: 6px 0 0; color: var(--ink-2); }
+  @media (max-width: 760px) {
+    .cabeza, .formatos, .charlas, .practico { grid-template-columns: 1fr; }
+    .cabeza { padding-top: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="envoltorio">
+  <nav class="barra">
+    <a class="marca" href="/">morci<span>.</span></a>
+    <div class="derecha">
+      <div class="menu"><a href="/videos/">Vídeos</a><a href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a><a class="ancho" href="https://www.patreon.com/morcimorcimorci">Patreon</a></div>
+      <a class="apuntate" href="/#newsletter">Newsletter</a>
+    </div>
+  </nav>
+
+  <header class="cabeza">
+    <div>
+      <span class="etiqueta">Charlas</span>
+      <h1 class="gran">Lo que los videojuegos cuentan <em>de cómo vivimos.</em></h1>
+      <p class="serif">Charlas que parten de un juego que conoce todo el mundo para hablar de algo de ahora: la casa que no podemos pagar, el trabajo que no se acaba, la guerra o de qué están hechas las máquinas que tenemos en la mano. Pensadas también para quien nunca ha jugado.</p>
+    </div>
+    <div class="tarjeta contacto">
+      <span>Para proponer una charla</span>
+      <b><a href="mailto:morci.contacto@gmail.com">morci.contacto@gmail.com</a></b>
+      <a class="boton rojo" href="mailto:morci.contacto@gmail.com">Escribirme</a>
+      <a class="pdf" href="/charlas/dossier-charlas.pdf">Descargar el dossier en PDF</a>
+    </div>
+  </header>
+
+  <h2 class="seccion">Formatos</h2>
+  <div class="formatos">
+    <div class="tarjeta"><span class="etiqueta">Charla</span><h3>Un juego, un tema</h3><span class="dura">60 minutos y coloquio</span><p>Una de las charlas de abajo, con el juego en pantalla y cada dato en su fuente original. Para centros culturales, festivales, jornadas, bibliotecas y universidades.</p></div>
+    <div class="tarjeta"><span class="etiqueta">Ciclo</span><h3>Varias sesiones con un hilo</h3><span class="dura">De dos a cuatro sesiones</span><p>Una sesión al mes o una jornada entera, con un hilo común: la ciudad, el trabajo, la guerra, lo que cuesta jugar. Abierto a sumar invitados de fuera del videojuego.</p></div>
+    <div class="tarjeta"><span class="etiqueta">Mesa o coloquio</span><h3>En conversación</h3><span class="dura">Lo que dure vuestra mesa</span><p>Participar en una mesa redonda o un coloquio de vuestro programa, desde la lectura social y política del videojuego.</p></div>
+  </div>
+
+  <h2 class="seccion">Las charlas</h2>
+  <p class="intro serif">Cada charla sale de uno de mis vídeos, investigado a fondo: informes de la ONU, estudios académicos y prensa de la época, citados en pantalla. También hablo de juegos que todavía no he llevado al canal.</p>
+  <div class="charlas">
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=rTfo0FiF62s"><img src="https://i.ytimg.com/vi/rTfo0FiF62s/maxresdefault.jpg" alt="" loading="lazy"><div><b>El mito de la PS2 y la guerra del Congo</b><p>Hace veinte años corrió que la PlayStation 2 había alimentado una guerra por el coltán. Qué hay de verdad, comprobado con el informe de la ONU, y a quién le cuesta lo que tienes en la mano.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=8py_OvG5QnY"><img src="https://i.ytimg.com/vi/8py_OvG5QnY/maxresdefault.jpg" alt="" loading="lazy"><div><b>Lo que sostuvo Sarajevo</b><p>This War of Mine nace de un texto del «sálvese quien pueda». Frente a él, lo que de verdad sostuvo la ciudad sitiada: los vecinos, un periódico que salió cada día y las clases en los sótanos.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=SPK6SYt4QA0"><img src="https://i.ytimg.com/vi/SPK6SYt4QA0/maxresdefault.jpg" alt="" loading="lazy"><div><b>Los Sims y la casa que no podemos pagar</b><p>Un Sim recién creado se compra su primera casa sin problemas. La mayoría de la gente joven, no. Los Sims como la promesa de clase media que se ha roto.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=0I7S769PN1k"><img src="https://i.ytimg.com/vi/0I7S769PN1k/maxresdefault.jpg" alt="" loading="lazy"><div><b>Stardew Valley: cuando descansar es trabajar</b><p>Huyes de la oficina a una granja para descansar y acabas trabajando más que antes. Qué dice de nosotros que busquemos descanso en otra forma de trabajo.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=lCTuiyf2HMo"><img src="https://i.ytimg.com/vi/lCTuiyf2HMo/maxresdefault.jpg" alt="" loading="lazy"><div><b>GTA y el sueño de pagar la hipoteca</b><p>Veinticinco años de sátira de Estados Unidos, y GTA VI a la vuelta de la esquina. Qué país retrata la saga y por qué hemos acabado deseando justo lo que critica.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=3lVxuyFh91A"><img src="https://i.ytimg.com/vi/3lVxuyFh91A/maxresdefault.jpg" alt="" loading="lazy"><div><b>Por qué la Horda siempre fracasa</b><p>World of Warcraft leído desde la ciencia política: un Estado que se rompe una y otra vez por las mismas grietas, y lo que tiene en común con casos reales.</p><small>Ver el vídeo</small></div></a>
+    <div class="tarjeta charla"><img src="/charlas/orcos.jpg" alt="" loading="lazy"><div><b>Los orcos que salieron de las novelas</b><p>En los primeros Warcraft los orcos eran malos porque eran orcos. Las novelas de la saga les dieron una historia y una razón: qué se gana y qué se pierde cuando un mundo deja de explicar qué es una raza.</p><small>Videojuego y literatura</small></div></div>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=bqylBpzOYgE"><img src="https://i.ytimg.com/vi/bqylBpzOYgE/maxresdefault.jpg" alt="" loading="lazy"><div><b>El que cuida siempre tiene la culpa</b><p>En los juegos de equipo como Overwatch, quien cura a los demás es a quien se culpa cuando se pierde. Un trabajo que sólo se ve cuando falta, como tantos cuidados.</p><small>Ver el vídeo</small></div></a>
+    <a class="tarjeta charla" href="https://www.youtube.com/watch?v=eaKrJGzbgjs"><img src="https://i.ytimg.com/vi/eaKrJGzbgjs/maxresdefault.jpg" alt="" loading="lazy"><div><b>DayZ y la nostalgia soviética</b><p>Qué buscan millones de jugadores en las ruinas de una república soviética inventada, y qué dice eso de cómo se recuerda el fin de la Unión Soviética.</p><small>Ver el vídeo</small></div></a>
+  </div>
+
+  <h2 class="seccion">Lo práctico</h2>
+  <div class="practico">
+    <div class="tarjeta"><span class="etiqueta">Necesito</span><p>Un proyector o una pantalla con entrada HDMI y sonido. El portátil lo llevo yo.</p></div>
+    <div class="tarjeta"><span class="etiqueta">A medida</span><p>El tema, la duración y el enfoque se ajustan a vuestro ciclo y a vuestro público.</p></div>
+    <div class="tarjeta"><span class="etiqueta">Dónde</span><p>Presencial en toda España, con desplazamiento desde Sevilla, o en remoto.</p></div>
+  </div>
+
+  <div class="tarjeta final">
+    <div><h2>¿Hablamos?</h2><p>Presupuesto y disponibilidad, por correo. Varias sesiones o un ciclo llevan precio conjunto.</p></div>
+    <a class="boton rojo" href="mailto:morci.contacto@gmail.com">morci.contacto@gmail.com</a>
+  </div>
+
+  <footer class="pie">
+    <div><a class="marca" href="/">morci<span>.</span></a><p>Lo que los videojuegos cuentan de cómo vivimos. Desde Sevilla.</p></div>
+    <div><h4>La web</h4><a href="/videos/">Vídeos</a><a href="/mitos/">Mitos</a><a href="/prensa/">Prensa</a><a href="/charlas/">Charlas</a><a href="/#newsletter">Newsletter</a></div>
+    <div><h4>Sígueme</h4><a href="https://www.youtube.com/@morcimorcimorci">YouTube</a><a href="https://www.instagram.com/morcimorcimorcimorci/">Instagram</a><a href="https://www.tiktok.com/@morcimorcimorcimorci">TikTok</a><a href="https://www.patreon.com/morcimorcimorci">Patreon</a></div>
+    <div><h4>Contacto</h4><a href="mailto:morci.contacto@gmail.com">morci.contacto@gmail.com</a></div>
+  </footer>
+</div>
+</body>
+</html>
